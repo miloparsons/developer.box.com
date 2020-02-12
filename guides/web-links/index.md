@@ -17,12 +17,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: web-links/delete
 ---
+# ウェブリンク
 
-# Web Links
+ウェブリンクは、URLを指すオブジェクトです。これらのオブジェクトは、Boxウェブアプリ内でブックマークとも呼ばれます。
 
-Web links are objects that point to URLs. These objects are also known as
-bookmarks within the Box web application.
-
-Web Links are treated similarly to file objects, which means that they have the
-same support for creating shared links, allow for copying, permanent deletion,
-and restoration.
+ウェブリンクはファイルオブジェクトと同様に扱われます。つまり、共有リンクの作成についても同じようにサポートされ、コピー、完全削除、および復元が可能です。

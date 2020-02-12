@@ -19,20 +19,16 @@ parent_id: downloads
 next_page_id: downloads/folder
 previous_page_id: downloads/file-version
 ---
+# ダウンロードURLの取得
 
-# Get Download URL
+Box公式SDKでは、ファイルのダウンロード時にバイナリデータが返されます。代わりにデータのダウンロードURLを取得する場合は、SDKの以下のメソッドを使用します。
 
-The official Box SDKs return the binary data when downloading a file. To get the
-download URL for the data instead, use the following SDK methods.
-
-<Samples id='get_files_id_content' variant='get_url' >
+<Samples id="get_files_id_content" variant="get_url">
 
 </Samples>
 
-## Download URL expiry
+## ダウンロードURLの有効期限
 
-Although this download URL can be passed to a user's browser to allow them to
-download the file, the URL does expire and should be requested again for any
-further downloads.
+このダウンロードURLは、ファイルのダウンロードを許可するためにユーザーのブラウザに渡すことができますが、このURLが期限切れになると、その後でダウンロードするには再度リクエストする必要があります。
 
 [api]: e://get_files_id_content

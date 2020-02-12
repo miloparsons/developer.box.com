@@ -19,15 +19,14 @@ parent_id: folders/single
 next_page_id: ''
 previous_page_id: folders/single/delete
 ---
+# フォルダ所有者の変更
 
-# Change Folder Owner
+フォルダの所有者を変更するには、その所有者ユーザーのIDを更新します。
 
-To change the owner of a folder, update the ID of its owner user.
-
-<Samples id='put_folders_id' variant='transfer' >
+<Samples id="put_folders_id" variant="transfer">
 
 </Samples>
 
-## Restrictions
+## 制約事項
 
-Only the current owner of a folder can transfer the ownership.
+所有権を移管できるのは、フォルダの現在の所有者のみです。

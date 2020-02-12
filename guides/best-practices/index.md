@@ -12,5 +12,4 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: best-practices/cors
 ---
-
-# Best Practices
+# ベストプラクティス

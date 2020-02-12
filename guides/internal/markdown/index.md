@@ -12,10 +12,8 @@ parent_id: internal
 next_page_id: ''
 previous_page_id: ''
 ---
-
 <!-- does not need translation -->
 
-# Markdown & More
+# マークダウンなど
 
-The following guides provide an explanation on how to use markdown
-within these docs.
+以下のガイドでは、これらのドキュメント内でのマークダウンの使用方法を説明します。

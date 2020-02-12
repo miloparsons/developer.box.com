@@ -13,8 +13,6 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: embed/box-embed
 ---
+# Boxの埋め込み
 
-# Embed Box
-
-Box supports a few different ways to embed files and folders straight into your
-front-end application.
+Boxでは、フロントエンドアプリケーションに直接ファイルやフォルダを埋め込むためのいくつかの方法をサポートしています。

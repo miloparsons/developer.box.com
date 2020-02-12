@@ -18,30 +18,25 @@ parent_id: metadata/templates
 next_page_id: ''
 previous_page_id: ''
 ---
+# メタデータテンプレートの更新
 
-# Update Metadata Template
+メタデータテンプレートを更新するには、一連の操作を[`PUT /metadata_templates/:id/:id/schema`][endpoint] APIに渡します。
 
-Updating a metadata template can be achieved by passing a set of operations to
-the [`PUT /metadata_templates/:id/:id/schema`][endpoint] API.
-
-<Samples id="put_metadata_templates_id_id_schema" >
+<Samples id="put_metadata_templates_id_id_schema">
 
 </Samples>
 
-## Safe Operations
+## 安全な操作
 
-Each operation in the list provided to the API performs a transformation of the
-template, changing it's schema. The following is a list of operations that can
-be used in this API and won't affect any previous templates.
+APIに提供されるリストにある各操作は、テンプレートの変換を実行してそのスキーマを変更します。以下に、このAPIで使用できる、以前のテンプレートに影響しない操作のリストを示します。
 
-### Edit template properties
+### テンプレートプロパティの編集
 
-The operation `editTemplate` allows for editing any of the base properties of
-the template, like the `displayName`, `copyInstanceOnItemCopy` and more.
+`editTemplate`操作では、`displayName`や`copyInstanceOnItemCopy`など、テンプレートの基本プロパティを編集できます。
 
-| Parameter |                                                 |
-| --------- | ----------------------------------------------- |
-| `data`    | An object representing the properties to change |
+| パラメータ  |                                                 |
+| ------ | ----------------------------------------------- |
+| `data` | An object representing the properties to change |
 
 ```json
 {
@@ -53,15 +48,15 @@ the template, like the `displayName`, `copyInstanceOnItemCopy` and more.
 }
 ```
 
-This will update the template to have a new display name of Client.
+これにより、新しい表示名がClientになるようにテンプレートが更新されます。
 
-### Add a field
+### フィールドの追加
 
-The operation `addField` adds an field to a template.
+`addField`操作では、テンプレートにフィールドを追加します。
 
-| Parameter |                                     |
-| --------- | ----------------------------------- |
-| `data`    | An object representing field to add |
+| パラメータ  |                                     |
+| ------ | ----------------------------------- |
+| `data` | An object representing field to add |
 
 ```json
 {
@@ -75,15 +70,13 @@ The operation `addField` adds an field to a template.
 }
 ```
 
-This will add a new non-hidden string field with a `displayName` and `key` of
-**category**.
+これにより、`displayName`および`key`が**category**に指定されている、非表示ではない新しい文字列フィールドが追加されます。
 
-### Reorder fields
+### フィールドの並べ替え
 
-The operation `reorderFields` reorders the list of fields in a template to match
-the requested field list.
+`reorderFields`操作では、テンプレート内のフィールドのリストを、リクエストされたフィールドリストに合わせて並べ替えます。
 
-| Parameter   |                                                   |
+| パラメータ       |                                                   |
 | ----------- | ------------------------------------------------- |
 | `fieldKeys` | The new list of field keys in the requested order |
 
@@ -94,17 +87,15 @@ the requested field list.
 }
 ```
 
-This will reorder the fields for the template to have `field2` first, followed by
-`field1`, then `field3`.
+これにより、テンプレートのフィールドは、最初に`field2`、その後`field1`、`field3`が続くように並べ替えられます。
 
-### Add enum option
+### 列挙型オプションの追加
 
-The operation `addEnumOption` adds an enum option at the end of the enum option
-list for the specified field.
+`addEnumOption`操作では、指定されたフィールドの列挙型オプションリストの末尾に列挙型オプションを追加します。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter  |                                                                    |
+| パラメータ      |                                                                    |
 | ---------- | ------------------------------------------------------------------ |
 | `data`     | An object representing the option to add to the enum               |
 | `fieldKey` | The key of the field to add the option. This must be an enum field |
@@ -121,13 +112,13 @@ list for the specified field.
 }
 ```
 
-### Reorder enum options
+### 列挙型オプションの並べ替え
 
-The operation `reorderEnumOptions` reorders the list of options in an enum.
+`reorderEnumOptions`操作では、列挙型のオプションのリストを並べ替えます。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter        |                                                                             |
+| パラメータ            |                                                                             |
 | ---------------- | --------------------------------------------------------------------------- |
 | `fieldKey`       | The key of the field to reorder the options for. This must be an enum field |
 | `enumOptionKeys` | The new list of enum option keys in the requested order                     |
@@ -146,17 +137,15 @@ The operation `reorderEnumOptions` reorders the list of options in an enum.
 }.
 ```
 
-This will reorder the enum options for field category to have `option2` first,
-followed by `option1`, then `option3`.
+これにより、フィールドカテゴリの列挙型オプションは、最初に`option2`、その後`option1`、`option3`が続くように並べ替えられます。
 
-### Reorder multi select options
+### 複数選択オプションの並べ替え
 
-The operation `reorderMultiSelectOptions` reorders the list of options in a
-multi select.
+`reorderMultiSelectOptions`操作では、複数選択のオプションのリストを並べ替えます。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter               |                                                                                     |
+| パラメータ                   |                                                                                     |
 | ----------------------- | ----------------------------------------------------------------------------------- |
 | `fieldKey`              | The key of the field to reorder the options for. This must be an multi select field |
 | `multiSelectOptionKeys` | The new list of multi select option keys in the requested order                     |
@@ -175,17 +164,15 @@ multi select.
 }.
 ```
 
-This will reorder the multi select options for field category to have `option2`
-first, followed by `option1`, then `option3`.
+これにより、フィールドカテゴリの複数選択オプションは、最初に`option2`、その後`option1`、`option3`が続くように並べ替えられます。
 
-### Add multi-select option
+### 複数選択オプションの追加
 
-The `addMultiSelectOption` operation adds a multi select option at the end of
-the multi select option list for the specified field.
+`addMultiSelectOption`操作では、指定されたフィールドの複数選択オプションリストの末尾に複数選択オプションが追加されます。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter  |                                                                           |
+| パラメータ      |                                                                           |
 | ---------- | ------------------------------------------------------------------------- |
 | `fieldKey` | The key of the field to add an item to. This must be a multi select field |
 | `data`     | The new item to add to the multi select                                   |
@@ -202,25 +189,21 @@ the multi select option list for the specified field.
 }
 ```
 
-This will add a new multi select option **Technology** under the field `category`.
+これにより、`category`フィールドで**Technology**という新しい複数選択オプションが追加されます。
 
-## Hazardous Operations
+## 危険な操作
 
-Each operation in the list provided to the API performs a transformation of the
-template, changing it's schema. The following is a list of operations that can
-be used in this API and can potentially change the data of any previously
-assigned templates.
+APIに提供されるリストにある各操作は、テンプレートの変換を実行してそのスキーマを変更します。以下に、このAPIで使用できる、以前に割り当てたテンプレートのデータを変更する可能性のある操作のリストを示します。
 
-These changes will be logged as template changes but not as file changes.
+このような変更は、ファイルの変更ではなくテンプレートの変更としてログに記録されます。
 
-### Edit a field
+### フィールドの編集
 
-The operation `editField` option edits any number of the base properties of a
-field like the `displayName`, `description`, `key`, and `hidden` state.
+`editField`操作オプションでは、`displayName`、`description`、`key`、`hidden`状態など、フィールドの基本プロパティをいくつでも編集できます。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter  |                                                                |
+| パラメータ      |                                                                |
 | ---------- | -------------------------------------------------------------- |
 | `data`     | An object representing the new properties to set for the field |
 | `fieldKey` | The key of the field to be edited                              |
@@ -237,24 +220,21 @@ field like the `displayName`, `description`, `key`, and `hidden` state.
 }
 ```
 
-This will update the field `category` to have a new display name of
-**Customer Group**. If the key is changed, existing values of the specified
-field are migrated to the new key. The search index will be updated yet it can
-take time depending on how many files are affected by the change.
+これにより、新しい表示名が**Customer Group**になるようにフィールド`category`が更新されます。このキーが変更された場合、指定されたフィールドの既存の値は新しいキーに移行されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This may affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響する可能性があります。
 
 </Message>
 
-### Remove a field
+### フィールドの削除
 
-The operation `removeField` removes an field from a template.
+`removeField`操作では、テンプレートからフィールドを削除します。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter  |                                                  |
+| パラメータ      |                                                  |
 | ---------- | ------------------------------------------------ |
 | `fieldKey` | The key of the field to remove from the template |
 
@@ -267,23 +247,21 @@ The operation `removeField` removes an field from a template.
 }
 ```
 
-This will remove the field `brand` from the template as well as all instances of
-the template. The search index will be updated yet it can take time depending on
-how many files are affected by the change.
+これにより、フィールド`brand`は、テンプレートに加えて、テンプレートのすべてのインスタンスから削除されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Edit an enum option
+### 列挙型オプションの編集
 
-The operation `editEnumOption` edits an option for an enum.
+`editEnumOption`操作では、列挙型のオプションを編集します。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter       |                                                                              |
+| パラメータ           |                                                                              |
 | --------------- | ---------------------------------------------------------------------------- |
 | `data`          | An object with the new key of the `enumOption`                               |
 | `fieldKey`      | The key of the field the enum option belongs to. Must refer to an enum field |
@@ -302,24 +280,21 @@ The operation `editEnumOption` edits an option for an enum.
 }
 ```
 
-This will rename the `enumOption` `FY11` to `FY16`. Existing instances of
-the template with the value set will be migrated to the new option. The search
-index will be updated yet it can take time depending on how many files are
-affected by the change.
+これにより、`enumOption`の名前`FY11`が`FY16`に変更されます。この値が設定されているテンプレートの既存のインスタンスは新しいオプションに移行されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Remove an enum option
+### 列挙型オプションの削除
 
-The operation `removeEnumOption` removes an option for an enum.
+`removeEnumOption`操作では、列挙型のオプションを削除します。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter       |                                                                              |
+| パラメータ           |                                                                              |
 | --------------- | ---------------------------------------------------------------------------- |
 | `fieldKey`      | The key of the field the enum option belongs to. Must refer to an enum field |
 | `enumOptionKey` | The key of the enum option to be removed                                     |
@@ -334,26 +309,23 @@ The operation `removeEnumOption` removes an option for an enum.
 }
 ```
 
-This will remove the `enumOption` `FY11` from the field `fy`. It will also
-remove the `enumOption` from all instances of the template. If the field on an
-instance of the template was set to this option then the value will be unset.
+これにより、フィールド`fy`から`enumOption` `FY11`が削除されます。また、テンプレートのすべてのインスタンスから`enumOption`も削除されます。テンプレートのインスタンスのフィールドがこのオプションに設定されていた場合は、値は設定解除されます。
 
-The search index will be updated yet it can take time depending on how many
-files are affected by the change.
+検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Edit a multi select option
+### 複数選択オプションの編集
 
-The operation `editMultiSelectOption` edits an option for a multi select.
+`editMultiSelectOption`操作では、複数選択のオプションを編集します。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter              |                                                                                              |
+| パラメータ                  |                                                                                              |
 | ---------------------- | -------------------------------------------------------------------------------------------- |
 | `data`                 | An object with the new key of the option                                                     |
 | `fieldKey`             | The key of the field the multi select option belongs to. Must refer to an multi select field |
@@ -372,24 +344,21 @@ The operation `editMultiSelectOption` edits an option for a multi select.
 }
 ```
 
-This will rename the `multiSelectOption` `FY11` to `FY16`. Existing instances of
-the template with the value set will be migrated to the new option. The search
-index will be updated yet it can take time depending on how many files are
-affected by the change.
+これにより、`multiSelectOption`の名前`FY11`が`FY16`に変更されます。この値が設定されているテンプレートの既存のインスタンスは新しいオプションに移行されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Remove a multi select option
+### 複数選択オプションの削除
 
-The operation `removeMultiSelectOption` removes an option for an multi select.
+`removeMultiSelectOption`操作では、複数選択のオプションを削除します。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter              |                                                                                              |
+| パラメータ                  |                                                                                              |
 | ---------------------- | -------------------------------------------------------------------------------------------- |
 | `fieldKey`             | The key of the field the multi select option belongs to. Must refer to an multi select field |
 | `multiSelectOptionKey` | The key of the multi select option to be removed                                             |
@@ -404,17 +373,13 @@ The operation `removeMultiSelectOption` removes an option for an multi select.
 }
 ```
 
-This will remove the `multiSelectOption` `FY11` from the field `fy`. It will
-also remove the `multiSelectOption` from all instances of the template. If the
-field on an instance of the template was set to this option then the value will
-be unset.
+これにより、フィールド`fy`から`multiSelectOption` `FY11`が削除されます。また、テンプレートのすべてのインスタンスから`multiSelectOption`も削除されます。テンプレートのインスタンスのフィールドがこのオプションに設定されていた場合は、値は設定解除されます。
 
-The search index will be updated yet it can take time depending on how many
-files are affected by the change.
+検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 

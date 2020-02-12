@@ -19,23 +19,20 @@ parent_id: webhooks/manage
 next_page_id: webhooks/manage/for-file
 previous_page_id: webhooks/manage
 ---
+# すべてのWebhookのリストを取得
 
-# List All Webhooks
+認証済みユーザーのすべてのWebhookのリストを取得するには、[すべてのWebhookのリストを取得][1]APIを使用します。
 
-To fetch all for the authenticated user, use the [List Webhooks][1] API.
-
-<Samples id='get_webhooks' >
+<Samples id="get_webhooks">
 
 </Samples>
 
-<Message type='warning'>
+<Message type="warning">
 
-This API requires the application to have the "Manage
-webhooks" scope enabled.
+このAPIを使用するには、アプリケーションの\[webhookを管理]スコープが有効になっている必要があります。
 
 </Message>
 
-This API call will only list the webhooks for the authenticated user, not
-for any other users in the enterprise.
+このAPI呼び出しは、認証済みユーザーのWebhookのみをリストし、会社内の他のユーザーのWebhookはリストしません。
 
 [1]: endpoint://get_webhooks

@@ -12,13 +12,11 @@ parent_id: internal/ui-elements
 next_page_id: internal/ui-elements
 previous_page_id: ''
 ---
-
 <!-- does not need translation -->
 
-# Tabs
+# タブ
 
-To add items to a tab, first create a `Tabs` object and then within that
-multiple `Tab` items with titles.
+タブに項目を追加するには、最初に`Tabs`オブジェクトを作成してから、その中にタイトルを付けた複数の`Tab`項目を作成します。
 
 ```html
 <Tabs>
@@ -35,13 +33,13 @@ multiple `Tab` items with titles.
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 Node
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 .NET
 
@@ -51,7 +49,4 @@ Node
 
 </H>
 
-Tabs use cookies to try and remember the user's choice. Please use the standard
-title `cURL`, `Java`, `.NET`, `Python` and `Node` to refer to our currently
-supported languages and the user will automatically be presented with the sample
-in their language of choice.
+タブは、Cookieを使用してユーザーの選択内容を記憶します。標準的なタイトルである`cURL`、`Java`、`.NET`、`Python`、および`Node`を使用して、現在サポートされている言語を参照してください。ユーザーには、ユーザーが選択した言語でサンプルが自動的に表示されます。

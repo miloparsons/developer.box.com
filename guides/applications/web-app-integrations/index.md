@@ -18,45 +18,34 @@ parent_id: applications
 next_page_id: ''
 previous_page_id: applications/web-app-integrations/configure
 ---
+# ウェブアプリ統合
 
-# Web App Integration
+Box Platformにより、アプリケーションはBoxウェブアプリ内で直接Boxユーザーに機能を提供できるようになります。ウェブアプリ統合によって、アプリケーションはBox内で使用できるようになり、ユーザーはサードパーティ製アプリケーションを使用してファイルを共有したり編集したりできます。
 
-Box Platform enables an application to provide features to Box users
-directly within the Box web application. Web App Integrations enable
-applications become part of the Box user experience, allowing users to share and
-edit files with third-party applications.
+## 機能
 
-## Features
+ウェブアプリ統合を使用した場合、ユーザーは、サードパーティ製アプリケーションを使用して、Boxに保存されているドキュメントやフォルダを変更、共有、または編集できます。このアプリケーションでは、さまざまなBoxコンテンツを操作することも、Boxでサポートされるアクションをすべて実行することもできます。また、\[統合]ポップアップメニューを介してBoxユーザーに新機能を提供できます。
 
-Using a Web App Integration, a user can modify, share, or edit documents and
-folders stored in Box using a third-party application. The application can
-interact with any Box content and perform any action supported by Box. It can
-offer new features to Box users through the Integrations popup menu.
+<ImageFrame border shadow width="400" center>
 
-<ImageFrame border shadow width='400' center>
-
-![Integration example](../images/integration-popup.png)
+![統合の例](../images/integration-popup.png)
 
 </ImageFrame>
 
-By enabling a Web App Integration an application can be added to these menus,
-allowing users to use their files in the application. Integrations can be
-restricted to certain content types and file extensions.
+ウェブアプリ統合を有効にすると、アプリケーションをこれらのメニューに追加できるため、ユーザーはそのアプリケーションでファイルを使用できるようになります。統合は、特定のコンテンツタイプとファイル拡張子に制限することができます。
 
-## Adding Web App Integration to an App
+## アプリへのウェブアプリ統合の追加
 
-To make an application's features available to Box users, create [Custom
-App][custom-app] application in the [developer console][devconsole] using [OAuth
-2.0][oauth2] authentication.
+Boxユーザーがアプリケーションの機能を使用できるようにするには、[OAuth 2.0][oauth2]認証を使用して[開発者コンソール][devconsole]で[カスタムアプリ][custom-app]を作成します。
 
-It must then be configured to support the features of the Box API that it needs
-and be release through the [Box App Gallery][app-gallery].
+その後、必要なBox APIの機能をサポートするよう構成し、[Boxアプリギャラリー][app-gallery]からリリースする必要があります。
 
-Once an application is released through the App Gallery, users can add it to
-their Box accounts by visiting the App Gallery and use its features from the
-context menus provided by files and folders.
+アプリケーションがアプリギャラリーでリリースされたら、ユーザーはアプリギャラリーにアクセスすることで自分のBoxアカウントにそのアプリケーションを追加し、ファイルやフォルダで表示されるコンテキストメニューからその機能を使用できます。
 
 [app-gallery]: g://applications/app-gallery
+
 [custom-app]: g://applications/custom-apps/oauth2-setup
+
 [oauth2]: g://authentication/oauth2
+
 [devconsole]: https://app.box.com/developers/console

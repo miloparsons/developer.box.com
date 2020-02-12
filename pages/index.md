@@ -26,29 +26,28 @@ parent_id: ''
 next_page_id: ''
 previous_page_id: ''
 ---
-
 # Box Platform
 
 <Hero search>
 
-# Build with the Box Platform
+# Box Platformで構築
 
-Integrate, extend and build apps with the power of Box
+Boxを利用してアプリケーションを統合、拡張、構築
 
 </Hero>
 
 <Centered wide>
 
-<Header stroke to='/guides'>
+<Header stroke to="/guides">
 Developer News
 
 </Header>
 
-<BlogCards >
+<BlogCards>
 
 </BlogCards>
 
-<More to='https://medium.com/box-developer-blog' right>
+<More to="https://medium.com/box-developer-blog" right>
 Developer Blog
 
 </More>
@@ -61,13 +60,13 @@ Developer Blog
 
 <HorizontalList centered>
 
-## Stay up to date
+## 最新情報
 
-* [Developer Blog](https://medium.com/box-developer-blog)
-* [Newsletter](page://newsletter)
-* [Changelog & Release Notes](page://changelog)
+* [開発者向けブログ](https://medium.com/box-developer-blog)
+* [ニュースレター](page://newsletter)
+* [変更ログとリリースノート](page://changelog)
 * [Twitter](https://twitter.com/boxplatform/)
-* [API Status](https://status.box.com/)
+* [APIステータス](https://status.box.com/)
 
 </HorizontalList>
 
@@ -77,16 +76,16 @@ Developer Blog
 
 <Centered wide>
 
-<Header stroke to='/guides'>
+<Header stroke to="/guides">
 Guides
 
 </Header>
 
-<GuideCategories limit='8' >
+<GuideCategories limit="8">
 
 </GuideCategories>
 
-<More to='/{locale}/guides' right>
+<More to="/{locale}/guides" right>
 All guides
 
 </More>
@@ -99,12 +98,12 @@ All guides
 
 <HorizontalList centered>
 
-## Elsewhere
+## 外部サイトへのリンク
 
-* [Support](page://support)
-* [Feedback](https://pulse.box.com/forums//%20909778-product-feedback?category_id=330838)
+* [サポート](page://support)
+* [フィードバック](https://pulse.box.com/forums//%20909778-product-feedback?category_id=330838)
 * [GitHub](https://github.com/box)
-* [Developer Blog](https://medium.com/box-developer-blog)
+* [開発者向けブログ](https://medium.com/box-developer-blog)
 * [Twitter](https://twitter.com/boxplatform/)
 
 </HorizontalList>
@@ -115,16 +114,16 @@ All guides
 
 <Centered wide>
 
-<Header stroke to='/guides'>
+<Header stroke to="/guides">
 API Reference
 
 </Header>
 
-<ReferenceCategories limit='3' >
+<ReferenceCategories limit="3">
 
 </ReferenceCategories>
 
-<More to='/{locale}/reference/list' right>
+<More to="/{locale}/reference/list" right>
 Full API Reference
 
 </More>

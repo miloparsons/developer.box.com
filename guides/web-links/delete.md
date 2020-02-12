@@ -20,12 +20,10 @@ parent_id: web-links
 next_page_id: web-links
 previous_page_id: web-links/create
 ---
+# ウェブリンクの削除
 
-# Delete Web Link
+Boxでウェブリンクを削除するには、そのウェブリンクのIDをAPIに渡す必要があります。
 
-To remove a web link in Box you will need to provide our API with the ID of
-the web link.
-
-<Samples id='delete_web_links_id' >
+<Samples id="delete_web_links_id">
 
 </Samples>

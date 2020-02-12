@@ -20,29 +20,26 @@ parent_id: tooling/sdks
 next_page_id: tooling/sdks/cli
 previous_page_id: tooling/sdks/python
 ---
+# Node SDKのインストール
 
-# Install Node SDK
-
-The Box Node SDK can be used to make API calls to the Box APIs in a Node
-project.
+Nodeプロジェクトでは、Box Node SDKを使用してBox APIへのAPI呼び出しを行うことができます。
 
 <CTA to="https://github.com/box/box-node-sdk">
 Learn more about the Node SDK on GitHub
 
 </CTA>
 
-## NPM installation
+## NPMのインストール
 
-To install the Node SDK run the following command from your terminal
-window or command prompt using the [Node Package Manager][npm].
+Node SDKをインストールするには、[Nodeパッケージマネージャ][npm]を使用してターミナルウィンドウまたはコマンドプロンプトから以下のコマンドを実行します。
 
 ```shell
 npm install box-node-sdk --save
 ```
 
-## Yarn installation
+## Yarnインストール
 
-Similarly, the SDK can be installed using the [Yarn package][yarn] manager.
+同様に、[Yarnパッケージ][yarn]マネージャを使用してSDKをインストールすることもできます。
 
 ```shell
 yarn add box-node-sdk
@@ -54,4 +51,5 @@ Learn more about the Node SDK on GitHub
 </CTA>
 
 [npm]: https://www.npmjs.com/
+
 [yarn]: https://yarnpkg.com/

@@ -18,25 +18,22 @@ parent_id: best-practices
 next_page_id: best-practices/branding-guidelines
 previous_page_id: ''
 ---
+# モバイルディープリンク
 
-# Mobile Deep Linking
+Boxのモバイルアプリでは、フォルダオブジェクトとファイルオブジェクトへのディープリンクがサポートされています。ウェブページまたはネイティブアプリからディープリンクを使用してBoxで直接オブジェクトを開くことができます。
 
-Box’s mobile applications support deep linking into folder and file objects.
-From a web page or native app it is possible to deep link to open an object
-directly in Box.
-
-The following URLs are supported in Box’s mobile applications:
+Boxのモバイルアプリでは、以下のURLがサポートされています。
 
 <!-- markdownlint-disable line-length -->
 
-| Application     | Object Type | Deep Link URL                          | iOS & Android |
+| アプリケーション        | オブジェクトタイプ   | ディープリンクのURL                            | iOSおよびAndroid |
 | --------------- | ----------- | -------------------------------------- | ------------- |
-| **Box**         | Folder      | `boxapp://folder?id=[folderid]`        | Version 3.7+  |
-|                 | File        | `boxapp://file?id=[fileid]`            |               |
+| **Box**         | フォルダ        | `boxapp://folder?id=[folderid]`        | Version 3.7+  |
+|                 | ファイル        | `boxapp://file?id=[fileid]`            |               |
 |                 | Shared Link | `boxapp://sharedlink?url=[sharedlink]` |               |
 |                 |             |                                        |               |
-| **Box for EMM** | Folder      | `boxemm://folder?id=[folderid]`        | Version 3.7+  |
-|                 | File        | `boxemm://file?id=[fileid]`            |               |
+| **Box for EMM** | フォルダ        | `boxemm://folder?id=[folderid]`        | Version 3.7+  |
+|                 | ファイル        | `boxemm://file?id=[fileid]`            |               |
 |                 | Shared Link | `boxemm://sharedlink?url=[sharedlink]` |               |
 
 <!-- markdownlint-enable line-length -->

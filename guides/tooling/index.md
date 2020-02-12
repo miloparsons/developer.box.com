@@ -17,5 +17,4 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: ''
 ---
-
-# Tooling
+# ツール

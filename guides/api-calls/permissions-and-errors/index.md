@@ -15,5 +15,4 @@ parent_id: api-calls
 next_page_id: api-calls/permissions-and-errors/scopes
 previous_page_id: api-calls/permissions-and-errors/common-errors
 ---
-
-# Permissions & Errors
+# 権限とエラー

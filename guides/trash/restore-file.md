@@ -19,14 +19,10 @@ parent_id: trash
 next_page_id: trash/permanently-delete-file
 previous_page_id: ''
 ---
+# ファイルの復元
 
-# Restore File
+ごみ箱に移動されたが削除されていないファイルを復元するには、`/files/:file_id`エンドポイントに`POST`リクエストを送信します。これにより、ファイルがまだ使用可能であれば元のフォルダに戻されます。または、オプションとして`parent`フォルダを指定することもできます。
 
-To restore a file that has been moved to the trash, but has not yet been
-purged, make a `POST` request to the `/files/:file_id` endpoint. This will
-place the file in the original folder if it is still available, or you
-optionally can specify a `parent` folder.
-
-<Samples id='post_files_id' >
+<Samples id="post_files_id">
 
 </Samples>

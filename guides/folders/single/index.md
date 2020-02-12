@@ -17,5 +17,4 @@ parent_id: folders
 next_page_id: folders/single/update
 previous_page_id: ''
 ---
-
-# Single Folders
+# 単一フォルダ

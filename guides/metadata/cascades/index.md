@@ -12,27 +12,18 @@ parent_id: metadata
 next_page_id: ''
 previous_page_id: ''
 ---
+# メタデータカスケードポリシー
 
-# Metadata Cascade Policies
+メタデータカスケードポリシーでは、フォルダの[メタデータインスタンス][instance]に対する自動カスケード動作を記述して、メタデータがそのフォルダ内のすべての項目に自動的に適用されるようにすることができます。
 
-A Metadata Cascade Policy describes automatic cascading behavior for a
-[Metadata Instance][instance] on a folder, allowing the metadata to
-automatically be applied to all the items within that folder.
+たとえば、アプリケーションは、プロジェクトIDの値を含む`projectData`メタデータテンプレートをプロジェクトフォルダに割り当てるとします。その後、このテンプレートにカスケードポリシーを割り当てると、Boxは、プロジェクトフォルダ内にある既存および新規のファイルやフォルダすべてに同じメタデータを自動的に適用できます。
 
-For example, an application might assign the `projectData` metadata template to
-a project folder, including the value of the project ID. By then assigning the
-cascade policy to this template it allows Box to automatically apply that same
-metadata to any existing and new files or folders within that folder.
+## 権限
 
-## Permissions
+フォルダの編集権限を持つユーザーは、その特定のフォルダ用にメタデータカスケードポリシーを作成できます。ポリシーは、1つのフォルダとそのフォルダの1つのメタデータインスタンスだけに割り当てられます。
 
-Any user with edit permissions on a folder can create metadata cascade policies
-for that given folder. Policies are assigned to exactly one folder and exactly
-one metadata instance on that folder.
+## 制限
 
-## Limitations
-
-There is some delay from file upload to the metadata being applied. This very
-much depends on the number of items in a folder.
+ファイルのアップロードからメタデータの適用まで、若干の遅延が生じます。この遅延の程度はフォルダ内の項目の数によって大きく変わります。
 
 [instance]: g://metadata/instances

@@ -12,15 +12,10 @@ parent_id: metadata
 next_page_id: ''
 previous_page_id: metadata/instances/update
 ---
+# メタデータインスタンス
 
-# Metadata Instances
+メタデータインスタンスには、[メタデータテンプレート][template]とファイルやフォルダ間の関係が記載されています。これには、メタデータテンプレートで使用する、このファイルまたはフォルダに設定された値が含まれます。
 
-A Metadata Instance describes the relation between
-a [MetaData Template][template] and a file or folder. It includes the values set
-for this file or folder for the metadata template
-
-For example, a user might have assigned an `invoiceData` metadata template to a
-file and provided 2 values, one for the invoice ID and one for the purchase
-order ID.
+たとえば、ユーザーは、`invoiceData`メタデータテンプレートをファイルに割り当て、2つの値を指定しています。この場合、1つは請求書ID用、もう1つは発注書ID用です。
 
 [template]: g://metadata/templates

@@ -15,13 +15,10 @@ parent_id: files
 next_page_id: ''
 previous_page_id: files
 ---
+# 制限
 
-# Limitations
+ファイルの操作には、いくつかの制限があります。
 
-A few limitations exists when working with files.
+## 名前に関する制約事項
 
-## Name restrictions
-
-There are some restrictions to a file's name. Names containing non-printable
-ASCII characters, forward and backward slashes (`/`, `\`), and protected names like
-`.` and `..` are automatically sanitized by removing the non-allowed characters.
+ファイルの名前にはいくつかの制約事項があります。印刷不可能なASCII文字、スラッシュ、およびバックスラッシュ(`/`、`\`)を含む名前のほか、`.`や`..`のような予約済みの名前は、許可されていない文字を削除して自動的にサニタイズされます。

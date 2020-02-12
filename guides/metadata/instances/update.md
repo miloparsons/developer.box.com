@@ -19,32 +19,25 @@ parent_id: metadata/instances
 next_page_id: metadata/instances
 previous_page_id: ''
 ---
+# メタデータインスタンスの更新
 
-# Update Metadata Instances
+ファイルのメタデータを更新するには、一連のJSON操作を[`PUT /files/:id/metadata_templates/:id/:id`][files_endpoint] APIに渡します。
 
-Updating metadata on a file can be achieved by passing a set of JSON operations
-to the [`PUT /files/:id/metadata_templates/:id/:id`][files_endpoint] API.
-
-<Samples id="put_files_id_metadata_id_id" >
+<Samples id="put_files_id_metadata_id_id">
 
 </Samples>
 
-Similarly, metadata assigned to a folder can be updated by passing a set of JSON
-operations to the [`PUT /files/:id/metadata_templates/:id/:id`][folders_endpoint]
-API.
+同様に、フォルダに割り当てられたメタデータを更新するには、一連のJSON操作を[`PUT /files/:id/metadata_templates/:id/:id`][folders_endpoint] APIに渡します。
 
-<Samples id="put_folders_id_metadata_id_id" >
+<Samples id="put_folders_id_metadata_id_id">
 
 </Samples>
 
-## JSON Operations
+## JSON操作
 
-The request body must follow the [JSON-Patch specification][jsonpatch], which is
-represented as a list of operation objects.
+リクエスト本文は[JSON-Patchの仕様][jsonpatch]に従う必要があります。これは、操作オブジェクトのリストとして表されます。
 
-Updates can be either `add`, `replace`, `remove` , `test`, `move`, or `copy`.
-The template instance can only be updated if the template has already been
-assigned to the file or folder.
+更新には、`add`、`replace`、`remove`、`test`、`move`、または`copy`のいずれかを指定できます。テンプレートインスタンスを更新できるのは、テンプレートがすでにファイルまたはフォルダに割り当てられている場合のみです。
 
 ```json
 [
@@ -60,26 +53,22 @@ assigned to the file or folder.
 ]
 ```
 
-Every operation exists out of an `op` name, the [JSON Pointer][pointer] `path`
-that points to the field to changes, and an optional `value` or `from` value
-depending on the operation being made.
+どの操作も、`op`の名前、変更対象のフィールドを指す[JSON Pointer][pointer] `path`のほか、実行される操作に応じた`value`または`from`値(省略可)で構成されます。
 
 <Message>
 
-When editing metadata, only values that adhere to the metadata template schema
-will be accepted. The update is applied completely or not at all. If any
-errors occur during the application of the update operations, the metadata
-instance is not changed.
+メタデータを編集する際には、メタデータテンプレートのスキーマに準拠した値のみを使用できます。更新は完全に適用されるか、まったく適用されないかのどちらかです。更新操作の適用中にエラーが発生した場合、メタデータインスタンスは変更されません。
 
 </Message>
 
-## Limitations
+## 制限
 
-Folder metadata operations on user's root folder with ID `0` are not allowed.
-Attempts to perform metadata operations on this will result in a `403` HTTP
-status code.
+ユーザーのルートフォルダ(ID `0`)に対するフォルダメタデータ操作は許可されていません。このフォルダに対してメタデータ操作を実行しようとすると、`403` HTTPステータスコードが返されます。
 
 [files_endpoint]: e://put_files_id_metadata_id_id
+
 [folders_endpoint]: e://put_folders_id_metadata_id_id
+
 [jsonpatch]: https://tools.ietf.org/html/rfc6902
+
 [pointer]: https://tools.ietf.org/html/rfc6901

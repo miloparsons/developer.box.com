@@ -12,61 +12,43 @@ parent_id: metadata
 next_page_id: ''
 previous_page_id: ''
 ---
+# メタデータテンプレート
 
-# Metadata Templates
+[メタデータテンプレート][template]には、ファイルまたはフォルダに割り当てることができる一連のキー/値ペアが記載されています。
 
-A [Metadata Template][template] describes a set of key/value
-pairs that can be assigned to a file or folder.
+たとえば、`invoiceData`テンプレートでは、請求書に関するデータを保持するため、請求書IDと発注書IDのフィールドが設定されています。
 
-For example, an `invoiceData` template might hold data about an invoice, having
-a field for the invoice ID as well as the purchase order ID.
+ファイルまたはフォルダには、`marketingCollateral`テンプレートインスタンスや`retentionPolicy`テンプレートインスタンスなど、複数の異なるテンプレート[インスタンス][instance]を関連付けることができます。
 
-A file or folder can have multiple distinct template [instances][instance]
-associated with it, such as a `marketingCollateral` template instance and a
-`retentionPolicy` template instances.
+## テンプレートとキー名
 
-## Template & Key Name
+メタデータテンプレートが作成されると、テンプレートの`name`から自動的に`templateKey`が生成されます。その際、名前に含まれるスペースと規格外の文字は削除され、キャメルケース形式に変換されます。
 
-When a metadata template is created a `templateKey` is automatically generated
-from the `name` of the template, removing any spaces and irregular characters in
-the name, and transforming it to camel case format.
+たとえば、`Test Name (with-special_) Characters`という名前のメタデータテンプレートの`templateKey`は`testNameWithspecialCharacters`になります。
 
-For example, a metadata template that is named
-`Test Name (with-special_) Characters` will have a `templateKey` of
-`testNameWithspecialCharacters`.
+その後、このテンプレートキーは、テンプレートの情報を取得したり、項目にテンプレートを割り当てたりするためのAPIリクエストを実行するときに使用されます。
 
-This template key is then used when making any API requests to get the template's
-information or assign it to an item.
+## メタデータのスコープ
 
-## Metadata Scopes
+テンプレートインスタンスも、2つの異なるグループ、つまり**スコープ**にグループ化されます。
 
-Template instances are also grouped by into two distinct groups, or **scopes**.
+* **`global`**: 所属する会社に関係なく、Boxを使用するすべてのユーザーが使用できるテンプレートのグループ。たとえば、追加のスキーマを関連付けずに自由形式のキー/値の`string`ペアを配置する場所として使用される`global.properties`テンプレートがあります。
+* **`enterprise_*`**: 特定の会社で定義されたテンプレートのグループ。これらのテンプレートには、管理者がウェブアプリ内で作成したものもあれば、APIを使用してアプリケーションによって作成されたものもあります。
 
-* **`global`**: a group of templates that is available to everyone using Box,
-  regardless of the enterprise they are in. An example is the
-  `global.properties` template that serves as a place to put free-form key/value
-  `string` pairs without any additional schema associated with it.
-* **`enterprise_*`**: a group of templates defined by that specific enterprise.
-  These templates are either created by admin's in the web application, or by
-  applications using the API.
+## 型
 
-## Types
+テンプレートでは、`string`、`enum`、`float`、`date`という4つの属性の型がサポートされます。日付は、ミリ秒まで正確なRFC3339形式で表されます。
 
-Templates support four attributes types: `string`, `enum`, `float`, and `date`.
-Dates are in a RFC3339 format with up to millisecond precision.
+## 制約事項
 
-## Restrictions
+メタデータテンプレートの作成は、管理者権限を持つユーザーに制限されています。つまり、管理者、または管理者から**会社のメタデータテンプレートの作成および編集**権限が付与されている共同管理者だけがウェブアプリまたはAPIを使用してテンプレートを管理できます。
 
-Creating metadata templates is restricted to users with admin permission. This
-means that only admins, or co-admins who have been granted rights to **Create
-and edit metadata templates for your company** by the admin can use the web app
-or the API to manage templates.
+テンプレートは会社あたり500個までに制限されています。
 
-There is a limit of 500 templates per enterprise.
-
-For more information on how to structure a metadata template, please refer to
-[this Box Community page][community].
+メタデータテンプレートの構造化方法の詳細については、[こちらのBoxコミュニティページ][community]を参照してください。
 
 [instance]: g://metadata/instances
+
 [template]: g://metadata/templates
+
 [community]: https://community.box.com/t5/How-to-Guides-for-Admins/How-to-Create-the-Right-Metadata-Structure-for-your-Enterprise/ta-p/43960

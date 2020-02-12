@@ -14,8 +14,6 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: security/device-pinners
 ---
+# セキュリティ
 
-# Security
-
-The Box API offers a few important ways to ensure everyone working with your
-data is secure and compliant.
+Box APIでは、データを扱うすべてのユーザーが確実にセキュリティで保護され、コンプライアンスに準拠するための重要な方法をいくつか用意しています。

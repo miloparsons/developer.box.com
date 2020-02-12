@@ -13,49 +13,32 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: ''
 ---
+# メタデータ
 
-# Metadata
+メタデータを使用すると、ユーザーやアプリケーションは、所有するファイルやフォルダに関連付けられたカスタムデータを定義、保存できます。
 
-Metadata allows users and applications to define and store custom data
-associated with their files and folders.
+メタデータは、ファイルまたはフォルダに属するキー/値ペアで構成されます。たとえば、重要な契約には、`clientNumber: 820183`と`clientName: bioMedicalCorp`のキー/値ペアが使用されている場合があります。
 
-Metadata consists of key/value pairs that belong to a file or folder folders.
-For example, an important contract may have key/value pairs of
-`clientNumber: 820183` and `clientName: bioMedicalCorp`.
+## テンプレート、インスタンス、およびカスケード
 
-## Templates, Instances, and Cascades
+メタデータを操作するには、開発者は3つの異なる種類のリソースを使用する必要があります。
 
-Working with Metadata requires a developer to work with three
-distinct types of resources.
+* **テンプレート:** [メタデータテンプレート][template]には、ファイルに割り当てることができる一連のキー/値ペアが記載されています。たとえば、`invoiceData`テンプレートでは、請求書に関するデータを保持するため、請求書IDと発注書IDのフィールドが設定されています。
+* **インスタンス:** [メタデータインスタンス][instance]には、メタデータの値など、テンプレートとファイルやフォルダ間の関係が記載されています。たとえば、ユーザーは、`invoiceData`メタデータテンプレートをファイルに割り当て、2つの値を指定しています。この場合、1つは請求書ID用、もう1つは発注書ID用です。
+* **カスケード**: [メタデータカスケードポリシー][cascade]には、フォルダのメタデータテンプレートに対する自動カスケード機能が記載されています。たとえば、ユーザーは、同じ`invoiceData`メタデータテンプレートをプロジェクトフォルダに割り当てると(2つの値を含む)、そのフォルダ内のすべてのファイルとフォルダに自動的に適用できます。
 
-* **Templates:**  A [Metadata Template][template] describes a set of key/value
-  pairs that can be assigned to a file. For example, an `invoiceData` template
-  might hold data about an invoice, having a field for the invoice ID as well as
-  the purchase order ID.
-* **Instances:** A [Metadata Instance][instance] describes the relation between
-  a template and a file or folder, including the metadata values. For example, a
-  user might have assigned an `invoiceData` metadata template to a file and
-  provided 2 values, one for the invoice ID and one for the purchase order ID.
-* **Cascades**: A [Metadata Cascade Policy][cascade] describes automatic
-  cascading behavior for a metadata template on a folder. For example, a user
-  might assign the same `invoiceData` metadata template to a project folder
-  (including the 2 values), allowing them to automatically apply to all the
-  files and folders within that folder.
+## メタデータを使用する理由
 
-## Reasons to use metadata
+メタデータは多くの目的で使用できます。会社がマーケティングチーム向けにデジタルアセットを効率よく編成する場合もあれば、開発者がワークフローや承認の促進のような高度なコンテンツ機能を提供する場合もあります。
 
-Metadata can be used for many purposes. Enterprises may want to have a better
-way to organize their digital assets for their marketing teams, or developers may
-want to provide advanced content functionality such as facilitating workflows or
-approvals.
+たとえば、`marketingCollateral`テンプレートでは、特定のマーケティングコンテンツを使用する状況とタイミングを定義できます。ユーザーは、Boxウェブアプリでテンプレートのレプリゼンテーションを確認すると同時に、ファイルのプレビューに移動できます。
 
-For example, a `marketingCollateral` template may define where and when specific
-marketing content should be used. Users can see a representation of the
-template in the Box web application while navigating to a file preview.
-
-To learn more, please visit [Box community articles][community].
+詳細については、[Boxコミュニティの記事][community]を参照してください。
 
 [community]: https://community.box.com/t5/Organizing-and-Tracking-Content/Using-Metadata/ta-p/30765
+
 [template]: g://metadata/templates
+
 [instance]: g://metadata/instances
+
 [cascade]: g://metadata/cascades

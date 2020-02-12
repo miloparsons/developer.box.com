@@ -14,27 +14,23 @@ parent_id: pages
 next_page_id: support/community-projects
 previous_page_id: ''
 ---
+# サポートとコミュニティ
 
-# Support & Community
+Boxのコミュニティおよびサポートでは、お客様の質問に答え、Box Platformとの統合をサポートすることを目的としています。
 
-Our community and support services are aimed to help ensure that your questions
-and integrations with Box Platform are answered.
+開発者サポートについては、以下のいずれかのチャネルでご連絡ください。
 
-For developer support, please reach out to us via one of our channels:
+* [開発者向けフォーラム][forum]: コード、技術統合、一般的なリクエスト
+* [Twitter][twitter]: 一般的な質問とサポート
+* [サポートチケットの送信][support]: アカウント固有の質問とサポート
 
-- [Developer forum][forum]: For support with code, technical integrations, and
-  general requests.
-- [Twitter][twitter]: For general questions and support.
-- [File a support ticket][support]: For account specific questions and support.
+コミュニティプロジェクトとプラットフォームの変更について最新情報を得るには、以下のチャネルのいずれかをご利用ください。
 
-For to keep up to date with community projects and Platform changes, please use
-one of these available channels:
-
-- [Changelog](page://changelog): For API changes, deprecated services, and
-  releases.
-- [Newsletter](page://newsletter): For quarterly notifications of major events,
-  projects, and releases.
+* [変更ログ](page://changelog): APIの変更、非推奨のサービス、リリース
+* [Newsletter](page://newsletter): 主なイベント、プロジェクト、リリースに関する四半期ごとのお知らせ
 
 [forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
+
 [twitter]: https://twitter.com/BoxPlatform
+
 [support]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB

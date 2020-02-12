@@ -12,27 +12,24 @@ parent_id: internal/markdown
 next_page_id: ''
 previous_page_id: ''
 ---
-
 <!-- does not need translation -->
 
 # Frontmatter
 
-Frontmatter is the data at the top part of a markdown file that can be found
-between two sets of dashes.
+Frontmatterとは、マークダウンファイルの上部にあるデータのことで、破線で挟まれています。
 
 ```md
 ---
 id: 1
 ---
-
 Markdown content
 ```
 
 <!-- markdownlint-disable line-length -->
 
-We support the following frontmatter in our documentation:
+Boxのドキュメントでは以下のFrontmatterがサポートされています。
 
-| Key                 | Description                                                                                                                                                                                              |
+| キー                  | 説明                                                                                                                                                                                                       |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `alias_paths`       | A list of paths to redirect from to this page. Used to smoothly redirect old URLs to new ones                                                                                                            |
 | `centered`          | Wraps a page (not a guide) in a `<Centered>` element in order to center the content in the middle of the page.                                                                                           |

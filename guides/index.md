@@ -15,5 +15,4 @@ parent_id: ''
 next_page_id: ''
 previous_page_id: ''
 ---
-
-# Guides
+# ガイド

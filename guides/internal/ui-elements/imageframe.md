@@ -12,12 +12,11 @@ parent_id: internal/ui-elements
 next_page_id: internal/ui-elements
 previous_page_id: ''
 ---
-
 <!-- does not need translation -->
 
-# Image Frame
+# 画像フレーム
 
-An image can be wrapped into a frame.
+画像は、フレーム内にラップすることができます。
 
 ```html
 <ImageFrame border center shadow width='200'>
@@ -27,9 +26,9 @@ An image can be wrapped into a frame.
 
 <H>
 
-<ImageFrame border center shadow width='200'>
+<ImageFrame border center shadow width="200">
 
-![Image](./box.jpg)
+![画像](./box.jpg)
 
 </ImageFrame>
 
@@ -37,7 +36,6 @@ An image can be wrapped into a frame.
 
 <Message>
 
-Options include a `border`, whether to `center` the image, whether to add a
-`shadow`, and a max-`width` of `200` or `400` pixels on larger screens.
+オプションには、`border`、画像の`center`、`shadow`の追加のほか、画面が大きくなった場合に`width`の最大値を`200`ピクセルと`400`ピクセルのどちらにするかがあります。
 
 </Message>

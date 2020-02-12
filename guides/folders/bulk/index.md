@@ -17,5 +17,4 @@ parent_id: folders
 next_page_id: folders/bulk/build-folder-tree
 previous_page_id: ''
 ---
-
-# Bulk Manipulation
+# 一括操作

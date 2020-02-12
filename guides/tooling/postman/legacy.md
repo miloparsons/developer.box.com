@@ -16,17 +16,13 @@ parent_id: tooling/postman
 next_page_id: ''
 previous_page_id: tooling/postman/refresh
 ---
-
 <!-- alex disable postman-postwoman -->
 
-# Legacy Postman Collection
+# 従来のPostmanコレクション
 
-Clicking the following button will install our [legacy Postman][legacy]
-collection. It is an incomplete Postman collection and is not expected to get
-any more updates, yet has some features that are (for now) still missing
-from the new collection.
+下のボタンをクリックすると、[従来のPostman][legacy]コレクションがインストールされます。これは不完全なPostmanコレクションであり、今後更新される予定もありませんが、新しいコレクションには(現時点では)まだ備えられていない機能がいくつかあります。
 
-<Postman id='768279fde466dffc5511' >
+<Postman id="768279fde466dffc5511">
 
 </Postman>
 
